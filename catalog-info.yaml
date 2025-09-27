@@ -1,0 +1,164 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: user-management-system
+  namespace: default
+  description: Complete user management and authentication system
+  tags:
+    - user-management
+    - authentication
+    - microservices
+  links:
+    - url: https://github.com/your-org/user-management-system
+      title: System Architecture
+      icon: github
+spec:
+  owner: group:default/platform-team
+  domain: user-services
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: my-microservice
+  namespace: default
+  description: A production-ready Node.js/Express microservice for user management
+  annotations:
+    github.com/project-slug: your-org/my-microservice
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/source-location: url:https://github.com/your-org/my-microservice
+  tags:
+    - nodejs
+    - express
+    - microservice
+    - api
+    - rest
+    - user-management
+  links:
+    - url: https://github.com/your-org/my-microservice
+      title: Source Code
+      icon: github
+    - url: https://my-microservice.example.com
+      title: Production API
+      icon: web
+    - url: https://my-microservice-staging.example.com
+      title: Staging API
+      icon: web
+    - url: https://my-microservice.example.com/health
+      title: Health Check
+      icon: dashboard
+    - url: https://grafana.example.com/d/my-microservice
+      title: Monitoring Dashboard
+      icon: dashboard
+    - url: https://my-microservice.example.com/api/users
+      title: API Explorer
+      icon: docs
+spec:
+  type: service
+  lifecycle: production
+  owner: group:default/platform-team
+  system: user-management-system
+  providesApis:
+    - my-microservice-api
+  dependsOn:
+    - resource:default/redis-cache
+    - resource:default/postgres-database
+  consumesApis:
+    - external-auth-api
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: my-microservice-api
+  namespace: default
+  description: REST API for My Microservice - User Management Operations
+  annotations:
+    github.com/project-slug: your-org/my-microservice
+  tags:
+    - rest
+    - openapi
+    - user-management
+  links:
+    - url: https://my-microservice.example.com/api/users
+      title: Live API
+      icon: web
+    - url: https://swagger.example.com/my-microservice
+      title: API Documentation
+      icon: docs
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:default/platform-team
+  system: user-management-system
+  definition:
+    $text: ./openapi.yaml
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis-cache
+  namespace: default
+  description: Redis cache for My Microservice session storage and caching
+  tags:
+    - cache
+    - redis
+    - infrastructure
+  links:
+    - url: https://redis-dashboard.example.com
+      title: Redis Dashboard
+      icon: dashboard
+spec:
+  type: cache
+  owner: group:default/platform-team
+  system: user-management-system
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: postgres-database
+  namespace: default
+  description: PostgreSQL database for My Microservice user data storage
+  tags:
+    - database
+    - postgresql
+    - infrastructure
+  links:
+    - url: https://pgadmin.example.com
+      title: Database Admin
+      icon: dashboard
+spec:
+  type: database
+  owner: group:default/platform-team
+  system: user-management-system
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: external-auth-api
+  namespace: default
+  description: External authentication service API
+  tags:
+    - authentication
+    - external
+    - oauth
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:default/platform-team
+  definition: |
+    openapi: 3.0.0
+    info:
+      title: External Auth API
+      version: 1.0.0
+      description: External authentication service
+    paths:
+      /auth/validate:
+        post:
+          summary: Validate authentication token
+          responses:
+            '200':
+              description: Token is valid
