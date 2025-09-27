@@ -20,7 +20,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: my-microservice
+  name: my-microservice-app
   namespace: default
   description: A production-ready Node.js/Express microservice for user management
   annotations:
