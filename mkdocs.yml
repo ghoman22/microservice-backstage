@@ -1,12 +1,4 @@
-site_name: My Microservice app 
+site_name: My Microservice app
 docs_dir: docs
 plugins:
   - techdocs-core
-nav:
-  - Home: index.md
-  - Getting Started: getting-started.md
-  - Architecture: architecture.md
-  - API Reference: api-reference.md
-  - Development: development.md
-  - Deployment: deployment.md
-
