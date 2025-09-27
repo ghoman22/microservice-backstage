@@ -52,7 +52,7 @@ graph TB
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-org/my-microservice.git
+   git clone https://github.com/platform-team/my-microservice.git
    cd my-microservice
    ```
 
@@ -176,7 +176,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For support and questions:
 
-- **GitHub Issues** - [Create an issue](https://github.com/your-org/my-microservice/issues)
+- **GitHub Issues** - [Create an issue](https://github.com/platform-team/my-microservice/issues)
 - **Documentation** - Check the [docs](https://my-microservice.example.com/docs)
 - **Team Contact** - platform-team@company.com
 

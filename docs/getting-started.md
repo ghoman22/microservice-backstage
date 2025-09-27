@@ -17,7 +17,7 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-org/my-microservice.git
+git clone https://github.com/platform-team/my-microservice.git
 cd my-microservice
 ```
 

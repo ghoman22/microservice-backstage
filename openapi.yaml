@@ -15,7 +15,7 @@ info:
   contact:
     name: Platform Team
     email: platform-team@company.com
-    url: https://github.com/your-org/my-microservice
+    url: https://github.com/platform-team/my-microservice
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT

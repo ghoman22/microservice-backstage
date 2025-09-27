@@ -1,8 +1,8 @@
 # My Microservice
 
-[![Build Status](https://github.com/your-org/my-microservice/workflows/CI/badge.svg)](https://github.com/your-org/my-microservice/actions)
-[![Coverage Status](https://codecov.io/gh/your-org/my-microservice/branch/main/graph/badge.svg)](https://codecov.io/gh/your-org/my-microservice)
-[![Docker Image](https://img.shields.io/docker/v/your-org/my-microservice?label=docker)](https://hub.docker.com/r/your-org/my-microservice)
+[![Build Status](https://github.com/platform-team/my-microservice/workflows/CI/badge.svg)](https://github.com/platform-team/my-microservice/actions)
+[![Coverage Status](https://codecov.io/gh/platform-team/my-microservice/branch/main/graph/badge.svg)](https://codecov.io/gh/platform-team/my-microservice)
+[![Docker Image](https://img.shields.io/docker/v/platform-team/my-microservice?label=docker)](https://hub.docker.com/r/platform-team/my-microservice)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A production-ready Node.js/Express microservice for user management, designed for cloud-native deployments and seamless integration with Backstage.
@@ -29,7 +29,7 @@ A production-ready Node.js/Express microservice for user management, designed fo
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/my-microservice.git
+git clone https://github.com/platform-team/my-microservice.git
 cd my-microservice
 
 # Install dependencies
@@ -149,7 +149,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🆘 Support
 
-- **Issues**: [GitHub Issues](https://github.com/your-org/my-microservice/issues)
+- **Issues**: [GitHub Issues](https://github.com/platform-team/my-microservice/issues)
 - **Documentation**: [TechDocs](https://backstage.example.com/docs/default/component/my-microservice)
 - **Team**: platform-team@company.com
 

@@ -279,4 +279,4 @@ Official client libraries are available for:
 
 Import our Postman collection for easy API testing:
 
-[Download Postman Collection](https://github.com/your-org/my-microservice/blob/main/postman/collection.json)
+[Download Postman Collection](https://github.com/platform-team/my-microservice/blob/main/postman/collection.json)

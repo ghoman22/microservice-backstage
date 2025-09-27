@@ -46,13 +46,13 @@ This document explains how to register My Microservice in Backstage.
    git init
    git add .
    git commit -m "Initial commit: My Microservice for Backstage"
-   git remote add origin https://github.com/your-org/my-microservice.git
+   git remote add origin https://github.com/platform-team/my-microservice.git
    git push -u origin main
    ```
 
 2. **Register in Backstage:**
    - Go to Backstage → Create → Register Existing Component
-   - Enter URL: `https://github.com/your-org/my-microservice/blob/main/catalog-info.yaml`
+   - Enter URL: `https://github.com/platform-team/my-microservice/blob/main/catalog-info.yaml`
    - Click "Analyze" and "Import"
 
 ### Option 2: Manual Import

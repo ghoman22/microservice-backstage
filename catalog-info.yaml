@@ -9,7 +9,7 @@ metadata:
     - authentication
     - microservices
   links:
-    - url: https://github.com/your-org/user-management-system
+    - url: https://github.com/platform-team/user-management-system
       title: System Architecture
       icon: github
 spec:
@@ -20,13 +20,13 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: my-microservice-app
+  name: my-microservice
   namespace: default
   description: A production-ready Node.js/Express microservice for user management
   annotations:
-    github.com/project-slug: your-org/my-microservice
+    github.com/project-slug: platform-team/my-microservice
     backstage.io/techdocs-ref: dir:.
-    backstage.io/source-location: url:https://github.com/your-org/my-microservice
+    backstage.io/source-location: url:https://github.com/platform-team/my-microservice
   tags:
     - nodejs
     - express
@@ -35,7 +35,7 @@ metadata:
     - rest
     - user-management
   links:
-    - url: https://github.com/your-org/my-microservice
+    - url: https://github.com/platform-team/my-microservice
       title: Source Code
       icon: github
     - url: https://my-microservice.example.com
@@ -74,7 +74,7 @@ metadata:
   namespace: default
   description: REST API for My Microservice - User Management Operations
   annotations:
-    github.com/project-slug: your-org/my-microservice
+    github.com/project-slug: platform-team/my-microservice
   tags:
     - rest
     - openapi
